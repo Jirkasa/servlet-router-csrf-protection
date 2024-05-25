@@ -4,6 +4,7 @@
   <artifactId>servlet-router-csrf-protection</artifactId>
   <version>1.0.0</version>
   <name>${project.groupId}:${project.artifactId}</name>
+  <description>CSRF protection for Servlet Router library.</description>
   <url>https://github.com/Jirkasa/servlet-router-csrf-protection</url>
   
   <properties>
