@@ -5,7 +5,7 @@ This library provides CSRF protection middleware for __[Servlet Router](https://
 - __[MVN Repository](https://mvnrepository.com/artifact/io.github.jirkasa/servlet-router-csrf-protection)__
 - __[JavaDoc](https://jirkasa.github.io/servlet-router-csrf-protection/io/github/jirkasa/csrfprotection/package-summary.html)__
 
-##How to use
+## How to use
 Implementing CSRF protection using the middleware provided by this library is simple. You just need to create a subclass of the __[CSRFProtection](https://jirkasa.github.io/servlet-router-csrf-protection/io/github/jirkasa/csrfprotection/CSRFProtection.html)__ class and implement the handleError method. This method is called when no CSRF token or an incorrect CSRF token is provided, and you can use it to, for example, send a page with an error message. Then, you just need to register the middleware at the beginning of your main router. It will take care of generating the CSRF token for each session, setting it as an attribute in the request, and of course, verifying for each request sent with an HTTP method that changes data whether the CSRF token is provided and correct. The following example shows the creation of the middleware and its registration.
 ```java
 public class MyCSRFProtection extends CSRFProtection {
